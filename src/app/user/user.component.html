@@ -1,0 +1,30 @@
+<div class="p-3 mb-2 text-center mt-5 bg-light text-dark border border-primary">
+    <input [(ngModel)]="nombre" placeholder="Hombre">
+    <div class="mt-5">
+        <button type="radio" class="m-2 color-red" [ngClass]="{'selected': sexo === 'Hombre'}" (click)="sexo = 'Hombre'">
+            <img src="assets/mas.png" width="40" alt="Hombre">
+        </button>
+        <button type="radio" class="m-2" [ngClass]="{'selected': sexo === 'Mujer'}" (click)="sexo = 'Mujer'">
+            <img src="assets/fem.png" width="40" alt="Mujer" value="mujer">
+        </button>
+
+    </div>
+
+    <div class="d-line p-3">
+        <button (click)="restarAlt()" class="d-inline-block m-3 btn-lg">-</button>
+        <h3 class="d-inline-block">Altura: {{altura}}</h3>
+        <button (click)="sumarAlt()" class="d-inline-block m-3 btn-lg">+</button>
+    </div>
+
+    <div class="d-line p-3">
+        <button (click)="restarPeso()" class="d-inline-block m-3 btn-lg">-</button>
+        <h3 class="d-inline-block">Peso: {{peso}}</h3>
+        <button (click)="sumarPeso()" class="d-inline-block m-3 btn-lg">+</button>
+    </div>
+
+    <p id="info">{{texto}}</p>
+    <div class="mt-1">
+        <button (click)="negar()" class="m-5 btn btn-danger btn-lg">Borrar</button>
+        <button (click)="confirmar()" class="m-5 btn btn-success btn-lg">Calcular</button>
+    </div>
+</div>

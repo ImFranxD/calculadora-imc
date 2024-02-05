@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora-imc';
+  array: string[] = [];
+
+  datos(message: string){
+    this.array.push(message);
+      console.log(this.array)
+  }
 }
